@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/roboto.css" />
+    <link rel="stylesheet" href="../style/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root">
+      <input id="amount" type="text" placeholder="Сумма кредита" />
+      <input id="period" type="text" placeholder="Срок кредита (мес.)" />
+      <input
+        id="percentage"
+        type="text"
+        placeholder="Процентная ставка (год.)" />
+      <button id="count">Рассчитать</button>
+      <p>Ежемесячный платеж: <span id="period-result"></span></p>
+      <p>Общая сумма выплаты: <span id="overall-result"></span></p>
+    </div>
+  </body>
+  <script src="../dist/index.js"></script>
+</html>

@@ -1,0 +1,5 @@
+{
+  "incudes": "./scripts/",
+  "ext": "ts",
+  "exec": "tsc"
+}
