@@ -5,7 +5,7 @@ const countBtn = document.getElementById('count');
 const periodResult = document.getElementById('period-result');
 const overallResult = document.getElementById('overall-result');
 
-type Value = number | false;
+type Value = number | null;
 
 let amountValue: Value;
 let periodValue: Value;
@@ -13,14 +13,14 @@ let percentageValue: Value;
 
 function getValue(element: HTMLInputElement): Value {
   const value: number = Number(element.value);
-  if (element.value && !isNaN(value)) {
+  if (value && !isNaN(value)) {
     if (element.classList.contains('error')) {
       element.classList.toggle('error');
     }
     return value;
   } else {
     element.classList.add('error');
-    return false;
+    return null;
   }
 }
 
