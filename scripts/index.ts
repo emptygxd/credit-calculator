@@ -5,13 +5,13 @@ const countBtn = document.getElementById('count');
 const periodResult = document.getElementById('period-result');
 const overallResult = document.getElementById('overall-result');
 
-type Value = number | null;
+type ValueT = number | null;
 
-let amountValue: Value;
-let periodValue: Value;
-let percentageValue: Value;
+let amountValue: ValueT;
+let periodValue: ValueT;
+let percentageValue: ValueT;
 
-function getValue(element: HTMLInputElement): Value {
+function getValue(element: HTMLInputElement): ValueT {
   const value: number = Number(element.value);
   if (value && !isNaN(value)) {
     if (element.classList.contains('error')) {
